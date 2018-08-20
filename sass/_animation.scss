@@ -1,0 +1,54 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@include keyframes(underLine) {
+    0% {
+        width: 0;
+        background: white;
+        left: 50%;
+    } // 50% {
+    //     transform:rotate(8deg);
+    // }
+    100% {
+        width: 108%;
+        background: white;
+        left: -3%;
+    }
+}
+
+@include keyframes(arrow) {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 30px;
+    }
+}

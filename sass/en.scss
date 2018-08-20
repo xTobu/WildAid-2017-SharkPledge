@@ -1,0 +1,122 @@
+@import "mixin";
+.en {
+    letter-spacing: 0;
+    nav {
+        a {
+            letter-spacing: 0;
+        }
+        @media screen and (max-width: 1580px) {
+            display: none;
+        }
+    }
+    a.bur {
+        @media screen and (max-width: 1580px) {
+            display: block
+        }
+    }
+    h2 {
+        font-size: 3.5rem;
+        @include m-1024 {
+            font-size: 3rem;
+        }
+        @include m-767 {
+            font-size: 2.8rem;
+        }
+    }
+    .intro .main {
+        @media screen and (max-width: 767px) {
+            width: 83%;
+        }
+    }
+    .txt {
+        p {
+            text-align: left;
+            span {
+                display: inline;
+            }
+        }
+    }
+    .argee {
+        margin-top: 30px;
+        @include media(1440px) {
+            font-size: 1.6rem;
+            margin-top: 25px;
+        }
+    }
+    .argee:before,
+    .argee:after {
+        width: 104%;
+        height: 52px;
+        left: -2%;
+    }
+    .argee:before {
+        top: -70px;
+    }
+    .argee:after {
+        bottom: -70px;
+    }
+    .argee span span {
+        display: block;
+        @include m-767 {
+            display: inline;
+        }
+    }
+    p.list {
+        margin-top: 35px;
+    }
+    p.list span {
+        width: 100%;
+        display: block;
+        @include m-767 {
+            width: 100%;
+            display: block;
+        }
+    }
+    .main-per .list {
+        @include media(1440px) {
+            margin-bottom: 15px;
+        }
+    }
+    .btnBox {
+        width: 100%;
+    }
+    .btnBox a:first-child {
+        margin-right: 3%;
+        @include m-767 {
+            margin-right: 2%;
+        }
+    }
+    .btn-blue {
+        font-size: 1.4rem;
+        @include m-413 {
+            font-size: 1.2rem;
+        }
+        .icon-comp,
+        .icon-per {
+            @include m-767 {
+                display: none;
+            }
+        }
+    }
+    .btn-join {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+    .cirBox {
+        @include m-767 {
+            width: 75%;
+        }
+    }
+    .pledgeBox {
+        width: 80%;
+        @include m-767 {
+            width: 100%;
+        }
+    }
+    .fb {
+        @include media(1440px) {
+            width: 215px;
+            margin: 0 auto;
+        }
+    }
+}

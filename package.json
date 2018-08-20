@@ -1,0 +1,15 @@
+{
+  "name": "site.vue",
+  "version": "1.0.0",
+  "description": "![Author](https://img.shields.io/badge/Author-Junxiang-yellow.svg)    ![Version](https://img.shields.io/badge/Version-0.1.0-blue.svg) ___",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

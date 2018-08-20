@@ -1,0 +1,184 @@
+.left .pic {
+    background-image: url(../../img/jay.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+section.celebrity .stateBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0;
+}
+
+section.celebrity .stateBox.in {
+    opacity: 1;
+}
+
+.left .pic.in {
+    opacity: 1;
+}
+
+.left .pic.active {
+    z-index: 18;
+    opacity: 1;
+}
+
+section.celebrity .stateBox.active {
+    z-index: 15;
+    opacity: 1;
+}
+.sliderBox a{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .left .pic.out.active {
+        -webkit-transform: translate(0, 101%);
+        -ms-transform: translate(0, 101%);
+        transform: translate(0, 101%);
+        -webkit-transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -ms-transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        /* opacity: 0; */
+    }
+    section.celebrity .stateBox.out.active {
+        -webkit-transform: translate(0, -101%);
+        -ms-transform: translate(0, -101%);
+        transform: translate(0, -101%);
+        -webkit-transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -ms-transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transition: transform 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        /* opacity: 0; */
+    }
+    .left .pic {
+        background-image: url(../../img/jay.jpg);
+        background-position: 50% -2%;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    .left .active {
+        cursor: url('../../img/arrow-left.png') 10 10, auto;
+    }
+    section.celebrity .fin {
+        cursor: url('../../img/arrow-left.png') 10 10, auto;
+        z-index: 20;
+    }
+    .right .active {
+        cursor: url('../../img/arrow-right.png') 10 10, auto;
+    }
+    .cele-state .statement {
+        width: 64%;
+        -webkit-transform: translate(0, 70%);
+        -ms-transform: translate(0, 70%);
+        transform: translate(0, 70%);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cele-state .statement {
+        top: 10px;
+    }
+    .left .pic.out.active {
+        /* -webkit-transform: translate(101%, 16%);
+        -ms-transform: translate(101%, 16%);
+        transform: translate(101%, 16%); */
+        margin-left: 100%;
+        -webkit-transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -ms-transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        /* opacity: 0; */
+    }
+    section.celebrity .stateBox.out.active {
+        /* -webkit-transform: translate(-101%, 0);
+        -ms-transform: translate(-101%, 0);
+        transform: translate(-101%, 0); */
+        margin-left: -100%;
+        -webkit-transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -ms-transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        transition: all 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        /* opacity: 0; */
+    }
+    div.right {
+        min-height: 260px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    div.right {
+        min-height: 225px;
+    }
+}
+
+.left .pic_01 {
+    background-image: url(../../img/jay.jpg);
+}
+
+.left .pic_02 {
+    background-image: url(../../img/jay.jpg);
+}
+
+.left .pic_03 {
+    background-image: url(../../img/jay.jpg);
+}
+
+.left .pic_04 {
+    background-image: url(../../img/jay.jpg);
+}
+
+div.right {
+    z-index: 0;
+}
+
+.sb_01 {
+/*    background-image: url(../../img/cele-bg1.png);*/
+    background-image: url(../../img/cele-bg1.jpg);
+}
+
+.sb_02 {
+/*    background-image: url(../../img/cele-bg2.png);*/
+    background-image: url(../../img/cele-bg2.jpg);
+}
+
+.sb_03 {
+/*    background-image: url(../../img/cele-bg3.png);*/
+    background-image: url(../../img/cele-bg3.jpg);
+}
+
+.sb_04 {
+/*    background-image: url(../../img/cele-bg4.png);*/
+    background-image: url(../../img/cele-bg4.jpg);
+}
+
+.cele-state {
+    background: none;
+}
+
+.pattern-cover {
+/*    display: none;*/
+}
+
+section.celebrity .stateBox:after {
+    content: "";
+    background-image: url(../../img/pattern.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

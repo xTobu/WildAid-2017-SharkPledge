@@ -1,0 +1,520 @@
+/* intro 按鈕 手機跑版*/
+
+@media screen and (max-width: 767px) {
+	section.intro div.btnBox a.btn-blue:first-child {
+		margin-right: 2.5%;
+	}
+}
+
+/*overflow hidden*/
+
+.overflowhidden {
+	overflow: hidden;
+	height: 100%;
+}
+
+/*隱藏*/
+
+.disappear {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/*
+Vue
+*/
+
+/* VUE transition */
+
+.loadingPage-fade-enter-active,
+.loadingPage-fade-leave-active {
+	transition: opacity 0.4s;
+}
+
+.loadingPage-fade-enter,
+.loadingPage-fade-leave-to {
+	opacity: 0;
+}
+
+/* end VUE transition */
+
+/* 彈幕*/
+
+section.personal div.personalUser {
+	position: absolute;
+	width: 150%;
+	right: 100%;
+}
+
+section.personal div.personalUser span.photo {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+	.main .left .play {
+		left: calc(100% - 60px);
+	}
+}
+
+/* body:after{
+	display:none;
+	content: url(../../img/opening-bg1.jpg) url(../../img/opening-bg2.jpg) url(../../img/opening-bg3.jpg) url(../../img/opening-bg1_m.jpg) url(../../img/opening-bg2_m.jpg) url(../../img/opening-bg3_m.jpg) ;
+   }
+    */
+
+.hiddenImg {
+	/* background-image: url(../../img/opening-bg1.jpg),
+		url(../../img/opening-bg2.jpg), url(../../img/opening-bg3.jpg),
+		url(../../img/opening-bg1_m.jpg), url(../../img/opening-bg2_m.jpg),
+		url(../../img/opening-bg3_m.jpg); */
+	position: absolute;
+	left: -99999px;
+	transform: scale(0);
+}
+
+.openingLogo:before {
+	background-image: url(../../img/opening-bg1.jpg), url(../../img/opening-bg2.jpg), url(../../img/opening-bg3.jpg), url(../../img/opening-bg1_m.jpg), url(../../img/opening-bg2_m.jpg), url(../../img/opening-bg3_m.jpg);
+	visibility: hidden;
+}
+
+section.company-logo div.category {
+	position: absolute;
+	top: 150px;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	/*    transition: top .s ease*/
+}
+
+section.company-logo div.category.abso {
+	position: fixed;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	transition: top 0.4s ease;
+}
+
+.openingLogo .inner span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+/*html,
+body {
+
+-webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    position: absolute;
+        z-index: 1;
+
+}
+*/
+
+.openingLogo .partner img {
+	/*    display: none;*/
+	opacity: 0;
+}
+
+.openingLogo .partner {
+	display: none;
+	background-image: url();
+	background-size: cover;
+}
+
+/*
+section.index {
+    position: relative;
+}
+*/
+
+/*
+
+section.intro {
+    position: relative;
+    height: 80vh;
+}
+
+section.celebrity{
+    position: relative;
+    height: 100vh;
+}
+body,
+html {
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+    section.index {
+        height: 110vh;
+    }
+}
+@media screen and (max-width: 767px) {
+    section.intro {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+   section.intro {
+        height: 75vh;
+    }
+}
+
+@media screen and (max-height: 750px) {
+   section.intro {
+        height: 83vh;
+    }
+}
+@media screen and (max-width: 1024px) {
+   section.intro {
+        height: 65vh;
+    }
+}
+*/
+
+/********************************************/
+
+/*
+.scrolled a.active span:before,
+.scrolled a.active span:after {
+    background: #555;
+}
+*/
+
+.fixed-element div.page,
+.fixed-element div.scroll,
+.fixed-element div.social a {
+	-webkit-transition: color 0.4s;
+	transition: color 0.4s;
+}
+
+.fixed-element li.midLine {
+	-webkit-transition: background-color 0.4s;
+	transition: background-color 0.4s;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	position: relative;
+	/* 設為相對位置，為了前後區塊的絕對位置而設定 */
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background: #2b7cb5;
+	transition: 0.2s;
+	/* 點選放大時候的漸變時間 */
+	transition: box-shadow 0.5s ease 0s;
+	width: 15px;
+	height: 15px;
+}
+
+.input_focus.trans_bg {
+	display: none;
+}
+
+/*plate*/
+
+section.company-logo {
+	z-index: 0;
+}
+
+section.index div.inner .platebg {
+	top: -5%;
+	left: -5%;
+	width: 110%;
+	height: 110%;
+	position: absolute;
+	background: url(../../img/bg1.jpg) no-repeat;
+	background-size: calc(110%);
+}
+
+section.index div.inner div.cover {
+	position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+	.openingLogo .tt {
+		width: 72%;
+	}
+}
+
+/*openingLogo*/
+
+.openingLogo {
+	-webkit-transition: background-image linear 0.5s;
+	-moz-transition: background-image linear 0.5s;
+	-o-transition: background-image linear 0.5s;
+	transition: background-image linear 0.5s;
+}
+
+.openingLogo .partner {
+	-webkit-transition: background-image linear 0.5s;
+	-moz-transition: background-image linear 0.5s;
+	-o-transition: background-image linear 0.5s;
+	transition: background-image linear 0.5s;
+}
+
+/*section.index*/
+
+section.index {
+	/*        position: fixed;*/
+	/* top: -5%; */
+	/* left: -5%; */
+	/* width: 110%; */
+	/*    z-index: -10;*/
+	/* height: 110%; */
+	background-size: calc(110%);
+}
+
+div.wrap div.openingLogo {
+	top: -5%;
+	left: -5%;
+	width: 110%;
+	height: 110%;
+	/*    background-size: calc(110%);*/
+}
+
+/*index tweenmax_default*/
+
+/*****************************************************/
+
+.openingLogo .tt,
+section.index div.main h2,
+section.index div.main p,
+section.index div.main div.btnIndex {
+	position: relative;
+	top: 75px;
+	opacity: 0;
+}
+
+/*intro tweenmax_default*/
+
+/*****************************************************/
+
+section.intro div.pic1 img,
+section.intro div.pic2 img,
+section.intro div.txt,
+section.intro div.badgeBox {
+	position: relative;
+	top: 75px;
+	opacity: 0;
+}
+
+/*****************************************************/
+
+/*****************************************************/
+
+/*12.20 無翅宣言紅邊*/
+
+.form li.warn textarea {
+	border: 1px solid #db1e1e;
+}
+
+/*join的箭頭*/
+
+/*右下社群 右中頁碼 隱藏*/
+
+div.arrowBox a.hidden,
+div.fixed-element div.social.hidden,
+div.fixed-element div.page.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/*croppie 隱藏邊框*/
+
+div.croppie-container div.cr-viewport,
+div.croppie-container div.cr-resizer {
+	border: 0px solid #fff;
+}
+
+/*croppie 隱藏Slider*/
+
+.cr-slider-wrap {
+	display: none;
+}
+
+canvas#finBox,
+canvas.finBox {
+	z-index: 0;
+	pointer-events: auto;
+}
+
+@media screen and (max-width: 767px) {
+	canvas#finBox,
+	canvas.finBox {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+	}
+}
+
+/*調整預設成50%*/
+
+.scale .cir {
+	left: 50%;
+}
+
+/*Section company*/
+
+div.category.hidden {
+	opacity: 0;
+	pointer-events: none;
+	-webkit-animation: fadeout 0.4s;
+	/* Safari 4+ */
+	-moz-animation: fadeout 0.4s;
+	/* Fx 5+ */
+	-o-animation: fadeout 0.4s;
+	/* Opera 12+ */
+	animation: fadeout 0.4s;
+	/* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+div.category.show {
+	opacity: 1;
+	-webkit-animation: fadein 0.4s;
+	/* Safari 4+ */
+	-moz-animation: fadein 0.4s;
+	/* Fx 5+ */
+	-o-animation: fadein 0.4s;
+	/* Opera 12+ */
+	animation: fadein 0.4s;
+	/* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* .argee:before, */
+
+.argee:after {
+	width: 0%;
+}
+
+/* .main-per .argee:before, */
+
+.main-per .argee:after {
+	width: 0%;
+}
+
+.argee {
+	margin-bottom: 0px;
+}
+
+.main-per .list {
+	margin-top: 10px;
+}
+
+/* .en .argee:before, */
+
+.en .argee:after {
+	width: 0%;
+}
+
+.en p.list {
+	margin-top: 10px;
+}
+
+/* .en .argee
+{
+	margin-bottom: 0px;
+} */
+
+.company-logo {
+	min-height: 100vh;
+}
+
+@media screen and (max-width: 1500px) {
+	section.company-logo div.category.abso {
+		width: 200px;
+	}
+	.category li {
+		margin: 1px 0;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.btn-join {
+		bottom: 15%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.btn-join {
+		bottom: 20%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.openingLogo .tt {
+		width: 100%;
+	}
+}

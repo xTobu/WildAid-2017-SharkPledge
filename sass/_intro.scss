@@ -1,0 +1,247 @@
+.intro {
+    background: #8fcde1;
+    z-index: 1;
+    height: 88vh;
+    @include media(960px) {
+        min-height: 100vh;
+        height: inherit;
+    }
+    @media screen and (max-height: 768px) {
+        height: 83vh;
+    }
+    @media screen and (max-device-width: 1024px) {
+        height: 78vh;
+    }
+    @media screen and (max-width: 767px) {
+        height: auto;
+    }
+    .main {
+        width: 80%;
+        max-width: 1050px;
+        position: relative;
+        z-index: 1;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        @media screen and (min-width: 768px) {
+            @include pos-mid;
+            top: 59%;
+        }
+        @media screen and (max-height: 768px) {
+            top: 65%;
+        }
+        @media screen and (max-width: 1024px) {
+            width: 82%;
+            top: 70%;
+        }
+        @media screen and (max-width: 960px) {
+            top: 65%;
+            width: 75%;
+            border: 0;
+        }
+        @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            margin: auto;
+            width: 80%;
+        }
+    }
+    .inner {
+        @extend %all-100;
+        display: flex;
+        align-items: center;
+        @include media(960px) {
+            flex-direction: column;
+        }
+    }
+    .btnBox {
+        @include media(960px) {
+            width: 80%;
+        }
+        @include m-767 {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.badgeBox {
+    width: 45%;
+    padding-left: 50px;
+    @include media(960px) {
+        width: 300px;
+        padding-left: 0;
+        margin-top: 30px;
+    }
+    @include m-767 {
+        width: 50%;
+        margin-top: 95px;
+    }
+    @include m-413 {
+        margin-top: 70px;
+    }
+}
+
+.txt {
+    padding: 50px 2% 60px;
+    width: 55%;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    @include media(1200px) {
+        width: 70%;
+    }
+    @media screen and (max-height: 768px) {
+        padding: 20px 2% 30px;
+    }
+    @include media(960px) {
+        width: 90%;
+        padding-top: 10px;
+    }
+    @include m-767 {
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    .btnBox {
+        font-size: 0;
+        a {
+            span {
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    p {
+        margin: 15px 0;
+        letter-spacing: 1.2px;
+        text-align: center;
+        font-weight: 500;
+        @include m-767 {
+            text-align: justify;
+            text-justify: inter-ideographic;
+            margin: 5px 0;
+        }
+        @include m-374 {
+            letter-spacing: 0;
+        }
+        span {
+            display: block;
+            @include m-767 {
+                display: inline;
+            }
+        }
+    }
+}
+
+.frameBox {
+    @extend %all-100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include media(960px) {
+        display: none;
+    }
+    div {
+        width: 85px;
+        opacity: 0.7;
+        position: absolute;
+        z-index: 1;
+        @include m-767 {
+            width: 70px;
+        }
+    }
+}
+
+.frame1 {
+    top: -2px;
+    left: -2px;
+}
+
+.frame2 {
+    top: -2px;
+    right: -2px;
+    transform: rotate(90deg);
+}
+
+.frame3 {
+    bottom: -2px;
+    left: -2px;
+    transform: rotate(-90deg);
+}
+
+.frame4 {
+    bottom: -2px;
+    right: -2px;
+    transform: scale(-1);
+}
+
+.argee {
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+    margin: 30px auto;
+    @include m-767 {
+        margin: 20px auto;
+        font-size: 1.6rem;
+    }
+    span {
+        span {
+            color: $blue;
+            @include m-767 {
+                display: block;
+            }
+        }
+    }
+    &:before,
+    &:after {
+        content: "";
+        width: 100%;
+        height: 35px;
+        background: url(../asset/svg/line.svg) no-repeat top center;
+        background-size: 100% 100%;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        display: block;
+        margin: 30px auto;
+        @include m-767 {
+            width: 108%;
+            left: -4%;
+            height: 40px;
+        }
+    }
+    &:before {
+        top: -57px;
+        @include media(960px) {
+            top: -60px;
+        }
+        @include m-767 {
+            top: -57px;
+        }
+    }
+    &:after {
+        bottom: -57px;
+        transform: rotate(180deg);
+        @include media(960px) {
+            bottom: -60px;
+        }
+        @include m-767 {
+            bottom: -57px;
+        }
+    }
+}
+
+p {
+    &.list {
+        font-size: 1.6rem;
+        @include m-767 {
+            font-size: 1.5rem;
+        }
+        span {
+            width: 280px;
+            margin: auto;
+            text-align: left;
+            display: block;
+            @include m-767 {
+                width: 266px;
+            }
+        }
+    }
+}

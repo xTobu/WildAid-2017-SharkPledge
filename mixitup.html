@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mixitup</title>
+    <script src="./js/vendor/jquery-3.2.1.min.js"></script>
+    <!--MixitUp-->
+    <script src="./js/vendor/MixitUp/jquery.mixitup.min.js"></script>
+</head>
+
+<body>
+    <button type="button" data-filter="all">All</button>
+    <button type="button" data-filter=".category-a">Category A</button>
+    <button type="button" data-filter=".category-b">Category B</button>
+    <button type="button" data-filter=".category-c">Category C</button>
+    <br>
+    <br>
+    <button type="button" data-sort="order:asc">Ascending</button>
+    <button type="button" data-sort="order:descending">Descending</button>
+    <button type="button" data-sort="random">Random</button>
+    <br>
+    <br>
+    <div class="container">
+        <ul>
+            <li class="mix category-a" data-order="1">
+                <div >1</div>
+            </li>
+            <li class="mix category-b" data-order="2">
+                <div >2</div>
+            </li>
+            <li class="mix category-b category-c"  data-order="3">
+                <div>3</div>
+            </li>
+            <li class="mix category-a category-d" data-order="4">
+                <div >4</div>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+    <script>
+        var containerEl = document.querySelector('.container ul'); //
+        var mixer = mixitup(containerEl, {
+            load: {
+                //                sort: 'published-date:desc'
+            },
+            animation: {
+                effects: 'scale',
+                duration: 700
+            },
+        });
+
+    </script>
+</body>
+
+</html>

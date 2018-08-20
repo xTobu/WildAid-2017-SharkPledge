@@ -1,0 +1,56 @@
+$bur_w:19px;
+$bur_h:2px;
+a.bur {
+    cursor: pointer;
+    padding: 9px 0 14px;
+    width: $bur_w;
+    display: inline-block;
+    vertical-align: middle;
+    @media screen and (min-width: 1201px) {
+        display: none;
+    }
+    span {
+        position: relative;
+        display: block;
+        width: $bur_w;
+        height: $bur_h;
+        background: white;
+        transition: all .2s ease-in-out;
+        &:before,
+        &:after {
+            position: absolute;
+            background: white;
+            content: '';
+            height: $bur_h;
+            transition: all .2s ease-in-out;
+            right: 0;
+        }
+        &:before {
+            top: -8px;
+            width: 11px;
+        }
+        &:after {
+            top: 8px;
+            width: 27px;
+        }
+    }
+}
+
+.burBox {
+    display: inline-block;
+    padding-top: 2px;
+    a.active {
+        span {
+            background: transparent;
+            &:before {
+                transform: rotate(45deg) translate(5px, 6px);
+                background: white;
+                width: 27px;
+            }
+            &:after {
+                transform: rotate(-45deg) translate(5px, -6px);
+                background: white;
+            }
+        }
+    }
+}

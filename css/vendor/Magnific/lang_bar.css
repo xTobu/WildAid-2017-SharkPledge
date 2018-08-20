@@ -1,0 +1,46 @@
+.lang-bar {
+  position: absolute;
+  right: -65px;
+  top: -20px;
+}
+.lang-bar__circle {
+  width: 40px;
+  height: 40px;
+  margin: 0px 0px 10px 0px;
+  border-radius: 50%;
+  border:2px solid white;
+  background-size: cover;
+}
+.lang-bar__a {
+  display: block;
+  text-align: center;
+}
+
+.lang-bar__circle span {
+  position: relative;
+  top: 50%;
+  font-weight: bold;
+  color: #fff;
+}
+
+.lang-bar__active {
+  background-color: white;
+}
+
+.lang-bar__active span {
+  color: #00adff;
+}
+/* 手機 */
+@media screen and (max-width: 480px) {
+  .lang-bar {
+    position: absolute;
+    right: 60%;
+    top: -45%;
+    width: 120px;
+    z-index: 1200;
+  }
+  .lang-bar__a {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}

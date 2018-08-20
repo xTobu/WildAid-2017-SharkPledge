@@ -1,0 +1,377 @@
+extends ./include/layout
+include ./include/mixin
+block content
+	a.btn-join(href="#")
+		.inner
+			span.icon
+				+svg('fin-w-btn')
+			span 加入宣言
+	// intro
+	section.intro
+		.main
+			.inner
+				.frameBox
+					.inner
+						.frame1
+							+svg('frame')
+						.frame2
+							+svg('frame')
+						.frame3
+							+svg('frame')
+						.frame4
+							+svg('frame')
+				.badgeBox
+					.badge
+						+png('badge')
+				.txt
+					h2 關於無翅宣言
+					h3 Fin Free PLEDGE
+					p 
+						span 鯊魚是位於海洋食物鏈最頂端捕食者，
+						span 是維護海洋健康重要的角色。
+						span 然而， 人類對魚翅的需求過度捕撈，
+						span 每年有高達7300萬條鯊魚命送於魚翅湯。
+						span 造成了全球鯊魚數量銳減，
+						span 而部分品種更正面臨滅絕種的危機。
+						span 野生救援期望藉著「無翅宣言」這個計劃，
+						span 號召全球拒絕魚翅，
+						span 一起守護鯊魚，愛護海洋。
+					.argee
+						span 我支持
+							span 『 沒有買賣，就沒有殺害 』
+					p.list
+						span 1) 我拒吃魚翅，也不以魚翅宴請他人
+						span 2) 拒吃、拒買野生動物產製品
+						span 3) 願共同守護鯊魚，愛護海洋
+					.btnBox
+						a(href="#").btn-blue
+							span.icon-comp
+							span 企業宣言
+						a(href="#").btn-blue
+							span.icon-per
+							span 個人宣言
+	// join
+	section.join
+		.skew
+		.arrowBox
+			a.left(href="#")
+				span.icon-arrow
+			a.right(href="#")
+				span.icon-arrow
+		.main
+			h2 加入宣言
+			h3 Join Us
+			.content
+				.main.main-per
+					.cirBox
+						.cirBor
+						//- p 請選擇連署類別
+						a(href="#").btn-blue
+							span.icon-per
+							span 個人連署
+						a(href="#").btn-blue
+							span.icon-comp
+							span 企業連署
+				//personal
+				.main.main-per(style="display:none")
+					.cirBox
+						.cirBor
+						p 使用Facebook登入
+						a(href="#").btn-blue.fb
+							span 登入
+							span.icon-facebook_w
+				.main.main-per(style="display:none")
+					.cirBox
+						.cirBor
+						.photo
+						p Hsuan Chang
+						a(href="#").btn-blue.fb
+							span 同意連署
+				.main.main-per(style="display:none")
+					.cirBox
+						.cirBor
+						.name
+							p 我是
+							p Hsuan Chang
+						.argee
+							span 我支持
+								span 『 沒有買賣，就沒有殺害 』
+						p.list
+							span 1) 我拒吃魚翅，也不以魚翅宴請他人
+							span 2) 拒吃、拒買野生動物產製品
+							span 3) 願共同守護鯊魚，愛護海洋
+						a(href="#").btn-blue.fb
+							span.icon-fb
+							span 分享到我的塗鴉牆
+			
+			// s1-corp
+			.content(style="display:none")
+				.cirBox
+					.form
+						ul
+							li
+								span.tri
+								select
+									option(value='0') 請選擇企業類別
+									option(value='1') 廣告
+									option(value='2') 非營利
+							li.warn
+								a.del_pos(href="#")
+									span.icon-del
+								input(type='text', maxlength='10', placeholder='企業名稱')
+							li
+								a.del_pos(href="#")
+									span.icon-del
+								input(type='text', maxlength='6', placeholder='企業簡稱(6個字內)')
+							//- li
+							//- 	a.del_pos(href="#")
+							//- 		span.icon-del
+							//- 	input(type='number',placeholder='請填寫統一編號')
+							//- li
+							//- 	textarea(type="text", maxlength='16',  placeholder="發表 16 字以內無翅宣言")
+					a.btn-blue(href="#")
+						span.main 上傳企業 LOGO 
+							span.icon-upload
+					p.ps ※ 請上傳 2M 以下的 PNG 檔案
+					.cirBor
+			// s2
+			.content(style="display:none")
+				.main.s2-main
+					.edit
+						.finBox
+							.comp-logo
+								+png('imei')
+							.img
+								+svg('fin-gn')
+							span.company 義美食品品
+						.scale
+							a.minus(href="#")
+								span
+							.slider
+								span.cir
+							a.plus(href="#")
+								span
+					.btnBox
+						a.btn-blue(href="#") 
+							span.main 重新上傳LOGO
+						a.btn-blue(href="#") 
+							span.main 預覽
+			//s3
+			.content(style="display:none")
+				.main.s3-main
+					.preview
+						.stateBox
+							.statement
+								.inner
+									span.icon-qt-top
+									span.icon-qt-bt
+									p.state 魚翅跟毒品一樣，是不能碰的。
+								p.comp-name
+									span 義美食品 / 企業
+							.stateBor
+								.inner
+									span
+						.finBox
+							.img
+								+svg('fin-gn')
+					a.btn-blue(href="#") 
+						span.main 送出連署
+			//s4
+			.content(style="display:none")
+				.main.s4-main
+					.cirBox
+						.cirBor
+						.fin-img
+							+svg('fin-gn')
+						h3 連署完成！
+						p 資料經審核後，logo將上載於連署頁
+							span.break 謝謝您對海洋保育的幫助！
+	//personal
+	section.personal
+		.userBox
+			span.photo
+			span name
+			span  : 我拒吃魚翅，也不以魚翅宴請他人
+		.pattern-cover
+	// celebrity
+	section.celebrity
+		.arrowBox
+			a.left(href="#")
+				span.icon-arrow
+			a.right(href="#")
+				span.icon-arrow
+		.main
+			.left
+				.content
+					.celeBox
+						a.play(href="#")
+							span.icon-play-button
+							span
+								span.icon-video
+								span 護鯊短片
+						.fin
+							+png('fin-jay')
+						.pic
+			.right
+				.cele-state
+					.stateBox
+							.statement
+								.inner
+									span.icon-qt-top
+									span.icon-qt-bt
+									p.state 魚翅跟毒品一樣是不能碰的
+								p.comp-name
+									span 周杰倫
+					.pattern-cover
+		//slider
+		.sliderBox
+			ul
+				li
+					a.active
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+				li
+					a(href="#")
+	//company
+	section.company-logo.hover_none
+		.bubbleBox
+		.main
+			h2 連署企業
+			h3 Petition Partners
+			.category
+				ul
+					li
+						a.active 全部
+					li
+						a(href="#") 品牌
+					li
+						a(href="#") 廣告
+					li
+						a(href="#") 非營利
+			.category-m
+				select
+					option(value='0') 全部
+					option(value='1') 廣告
+					option(value='2') 非營利
+			.content
+				ul
+					li.item
+							.fin
+								+svg('fin-w-comp')
+							.hover
+								.inner
+									.statement
+										.inner
+											span.icon-qt-top
+											span.icon-qt-bt
+											p.state 魚翅跟毒品一樣是不能碰的
+										p.comp-name
+											span 周杰倫
+					li.item
+						.fin
+							+svg('fin-w-comp')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+svg('fin-w-comp')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+svg('fin-w-comp')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+svg('fin-w-comp')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+svg('fin-w-comp')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+					li.item
+						.fin
+							+svg('fin-w-comp')
+						.hover
+							.inner
+								.statement
+									.inner
+										span.icon-qt-top
+										span.icon-qt-bt
+										p.state 魚翅跟毒品一樣，是不能碰的。
+									p.comp-name
+										span 周杰倫
+				// laoding
+				.loadingBox
+					include include/loading.pug
+		//footer
+		footer
+			.footer-social
+				ul
+					li
+						a(href="#")
+							span.icon-fb
+					li
+						a(href="#")
+							span.icon-yt
+			.copy
+				ul
+					li
+						a(href="#") 聯繫我們
+					li
+						a(href="#") 隱私權政策
+					li Copyright © 2018 WildAid Limited.
+		.pattern-cover
+		<script  src="js/vendor/bubble.js"></script>
+
+

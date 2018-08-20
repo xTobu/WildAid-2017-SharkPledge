@@ -1,0 +1,106 @@
+@-webkit-keyframes donut-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes donut-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.en {
+  letter-spacing: 0; }
+  .en nav a {
+    letter-spacing: 0; }
+  @media screen and (max-width: 1580px) {
+    .en nav {
+      display: none; } }
+  @media screen and (max-width: 1580px) {
+    .en a.bur {
+      display: block; } }
+  .en h2 {
+    font-size: 3.5rem; }
+    @media screen and (max-width: 1024px) {
+      .en h2 {
+        font-size: 3rem; } }
+    @media screen and (max-width: 767px) {
+      .en h2 {
+        font-size: 2.8rem; } }
+  @media screen and (max-width: 767px) {
+    .en .intro .main {
+      width: 83%; } }
+  .en .txt p {
+    text-align: left; }
+    .en .txt p span {
+      display: inline; }
+  .en .argee {
+    margin-top: 30px; }
+    @media screen and (max-width: 1440px) {
+      .en .argee {
+        font-size: 1.6rem;
+        margin-top: 25px; } }
+  .en .argee:before,
+  .en .argee:after {
+    width: 104%;
+    height: 52px;
+    left: -2%; }
+  .en .argee:before {
+    top: -70px; }
+  .en .argee:after {
+    bottom: -70px; }
+  .en .argee span span {
+    display: block; }
+    @media screen and (max-width: 767px) {
+      .en .argee span span {
+        display: inline; } }
+  .en p.list {
+    margin-top: 35px; }
+  .en p.list span {
+    width: 100%;
+    display: block; }
+    @media screen and (max-width: 767px) {
+      .en p.list span {
+        width: 100%;
+        display: block; } }
+  @media screen and (max-width: 1440px) {
+    .en .main-per .list {
+      margin-bottom: 15px; } }
+  .en .btnBox {
+    width: 100%; }
+  .en .btnBox a:first-child {
+    margin-right: 3%; }
+    @media screen and (max-width: 767px) {
+      .en .btnBox a:first-child {
+        margin-right: 2%; } }
+  .en .btn-blue {
+    font-size: 1.4rem; }
+    @media screen and (max-width: 413px) {
+      .en .btn-blue {
+        font-size: 1.2rem; } }
+    @media screen and (max-width: 767px) {
+      .en .btn-blue .icon-comp,
+      .en .btn-blue .icon-per {
+        display: none; } }
+  .en .btn-join {
+    font-size: 1.3rem;
+    line-height: 1.3; }
+  @media screen and (max-width: 767px) {
+    .en .cirBox {
+      width: 75%; } }
+  .en .pledgeBox {
+    width: 80%; }
+    @media screen and (max-width: 767px) {
+      .en .pledgeBox {
+        width: 100%; } }
+  @media screen and (max-width: 1440px) {
+    .en .fb {
+      width: 215px;
+      margin: 0 auto; } }
+
+
+
+/*# sourceMappingURL=en.css.map */

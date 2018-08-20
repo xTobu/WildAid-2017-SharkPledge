@@ -1,0 +1,22 @@
+$b-size: 35px;
+$b-surface: -120vh;
+.bubble {
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    will-change: transform;
+    background: rgba(#FFF, .02); // gradient fallback
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.2) 90%);
+    animation: bubble 5s infinite cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+@keyframes bubble {
+    from {
+        transform: translateY($b-size);
+        opacity: 1;
+    }
+    to {
+        transform: translateY($b-surface);
+        opacity: 0.25;
+    }
+}

@@ -1,0 +1,133 @@
+/*index*/
+/*******************************/
+.openingLogo .ttBox {
+	/* position: relative; */
+	border: 0px;
+	box-shadow: 0 0px 0px 0px #2a4464;
+}
+.openingLogo .ttBox::before,
+.openingLogo .ttBox::after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.openingLogo .ttBox.drawIndex {
+	-webkit-transition: color 0.25s;
+	transition: color 0.25s;
+}
+
+.openingLogo .ttBox.drawIndex::before,
+.openingLogo .ttBox.drawIndex::after {
+	border: 10px solid transparent;
+	width: 0;
+	height: 0;
+}
+
+.openingLogo .ttBox.drawIndex::before {
+	top: 0;
+	left: 0;
+}
+
+.openingLogo .ttBox.drawIndex::after {
+	bottom: 0;
+	right: 0;
+}
+/*******************************/
+
+.openingLogo .ttBox.drawed {
+	color: #fff;
+}
+
+.openingLogo .ttBox.drawed::before,
+.openingLogo .ttBox.drawed::after {
+	width: 100%;
+	height: 100%;
+}
+
+.openingLogo .ttBox.drawed::before {
+	border-top-color: #fff;
+	border-right-color: #fff;
+	-webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+	transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.openingLogo .ttBox.drawed::after {
+	border-bottom-color: #fff;
+	border-left-color: #fff;
+
+	-webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+		height 0.25s ease-out 0.75s;
+	transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+		height 0.25s ease-out 0.75s;
+}
+
+/*index*/
+/*******************************/
+
+.intro .cube {
+	/*    position: relative;*/
+	border: 0px;
+}
+.intro .cube::before,
+.intro .cube::after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.intro .cube.drawIntro {
+	-webkit-transition: color 0.25s;
+	transition: color 0.25s;
+}
+
+.intro .cube.drawIntro::before,
+.intro .cube.drawIntro::after {
+	border: 1px solid transparent;
+	width: 0;
+	height: 0;
+}
+
+.intro .cube.drawIntro::before {
+	top: 0;
+	left: 0;
+}
+
+.intro .cube.drawIntro::after {
+	bottom: 0;
+	right: 0;
+}
+/*******************************/
+
+.intro .cube.drawed {
+	color: #fff;
+}
+
+.intro .cube.drawed::before,
+.intro .cube.drawed::after {
+	width: 100%;
+	height: 100%;
+}
+
+.intro .cube.drawed::before {
+	border-top-color: #fff;
+	border-right-color: #fff;
+	-webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+	transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.intro .cube.drawed::after {
+	border-bottom-color: #fff;
+	border-left-color: #fff;
+
+	-webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+		height 0.25s ease-out 0.75s;
+	transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
+		height 0.25s ease-out 0.75s;
+}

@@ -1,0 +1,282 @@
+.celebrity {
+    overflow: hidden;
+    background: $gray;
+    height: calc(100vh - 75px);
+    @media screen and (max-width: 767px) {
+        height: auto;
+    }
+    .main {
+        @extend %all-100;
+        display: flex;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    .arrowBox {
+        top: 50%;
+        @media screen and (min-width: 1025px) {
+            display: none;
+        }
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        a {
+            opacity: 0.5;
+            color: white;
+            @media screen and (max-width: 767px) {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.right {
+    width: 53%;
+}
+
+.left {
+    position: relative;
+    z-index: 1;
+    width: 47%;
+    @media screen and (min-width: 1025px) {
+        transform: skew(-8deg) scale(1.18);
+    }
+    .content {
+        @extend %all-100;
+        @media screen and (min-width: 1025px) {
+            transform: skew(8deg) scale(1.18);
+        }
+    }
+    .pic {
+        @extend %all-100;
+        background: url(../img/jay.jpg) 50% -8% no-repeat;
+        background-size: cover;
+        @media screen and (max-width: 767px) {
+            background-position: center 16%;
+        }
+    }
+    .fin {
+        width: 180px;
+        position: absolute;
+        right: 15%;
+        bottom: 15%;
+        transform: scale(0.75);
+        @media screen and (max-width: 1024px) {
+            width: 150px;
+            bottom: 4%;
+            right: 6%;
+        }
+        @media screen and (max-width: 767px) {
+            width: 30%;
+            bottom: 2%;
+            right: inherit;
+            left: 9%;
+        }
+    }
+    .play {
+        display: block;
+        @extend %pos-mid;
+        font-size: 6rem;
+        color: white;
+        opacity: 0.5;
+        transition: all .3s ease;
+        @include m-767 {
+            font-size: 4rem;
+            opacity: 1;
+            top: 45px;
+            right: -10px;
+            left: inherit;
+        }
+        &:hover {
+            @include media-min(1025px) {
+                opacity: 1;
+            }
+        }
+        .icon-play-button {
+            @include m-767 {
+                display: none;
+            }
+        }
+        span {
+            display: block;
+            &:last-child {
+                font-size: 1.4rem;
+                @include media-min(768px) {
+                    display: none;
+                }
+            }
+        }
+        .icon-video {
+            font-size: 3rem;
+        }
+    }
+}
+
+.left,
+.right {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    @media screen and (max-width: 1024px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.celeBox {
+    @extend %all-100;
+    @media screen and (max-width: 767px) {
+        height: 260px;
+    }
+    @media screen and (max-width: 413px) {
+        height: 225px;
+    }
+    @media screen and (max-width: 374px) {
+        height: 165px;
+    }
+}
+
+.cele-state {
+    @extend %all-100;
+    @extend %flex-mid;
+    background: url(../img/cele-bg4.png) center right no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+        padding: 50px 0 10px;
+    }
+    @media screen and (max-width:374px) {
+        padding-top: 35px;
+    }
+    .statement {
+        background: transparent;
+        color: white;
+        width: 80%;
+        margin: auto;
+        @media screen and (max-width: 1024px) {
+            width: 75%;
+            margin-right: 20%;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 25px;
+            width: 85%;
+            margin-bottom: 30px;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 374px) {
+            margin-bottom: 20px;
+        }
+        .state {
+            font-size: 4rem;
+            @media screen and (max-width: 1024px) {
+                font-size: 2.8rem;
+                margin: 20px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 2.6rem;
+                margin: 20px;
+            }
+            @media screen and (max-width: 413px) {
+                font-size: 2rem;
+                margin: 10px;
+            }
+        }
+        .icon-qt-top,
+        .icon-qt-bt {
+            font-size: 3rem;
+            @media screen and (max-width: 1024px) {
+                font-size: 2.2rem;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 2.2rem;
+            }
+            @media screen and (max-width: 374px) {
+                font-size: 1.8rem;
+            }
+        }
+        .icon-qt-top {
+            top: -40px;
+            left: -20px;
+            @media screen and (max-width: 767px) {
+                top: -30px;
+            }
+            @media screen and (max-width: 374px) {
+                top: -20px;
+            }
+        }
+        .icon-qt-bt {
+            bottom: -40px;
+            right: -20px;
+            @media screen and (max-width: 767px) {
+                bottom: -30px;
+            }
+            @media screen and (max-width:374px) {
+                bottom: -20px;
+            }
+        }
+        .comp-name {
+            margin-top: 90px;
+            font-size: 2rem;
+            @extend %fw_b;
+            padding-right: 30px;
+            @media screen and (max-width: 767px) {
+                margin-top: 30px;
+                padding-right: 10px;
+            }
+            @media screen and (max-width: 413px) {
+                font-size: 1.6rem;
+                padding-right: 25px;
+            }
+            @media screen and (max-width: 374px) {
+                padding-right: 3px;
+            }
+            span {
+                &:before {
+                    background: white;
+                    left: -85px;
+                    width: 70px;
+                    top: 53%;
+                }
+            }
+        }
+    }
+}
+
+.pattern-cover {
+    @extend %all-100;
+    background: url(../img/pattern.png), rgba(black, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sliderBox {
+    position: absolute;
+    bottom: 20px;
+    @media screen and (min-width: 768px) {
+        right: 20px;
+    }
+    @media screen and (max-width: 767px) {
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+    }
+    li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    a {
+        @include cir(10px);
+        border: 1px solid white;
+        @media screen and (max-width: 767px) {
+            width: 8px;
+            height: 8px;
+        }
+    }
+    .active {
+        background: white;
+    }
+}

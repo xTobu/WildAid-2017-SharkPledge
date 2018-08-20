@@ -1,0 +1,33 @@
+.bubble {
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  will-change: transform;
+  background: rgba(255, 255, 255, 0.02);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.03) 25%);
+  -webkit-animation: bubble 5s infinite cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  animation: bubble 5s infinite cubic-bezier(0.55, 0.06, 0.68, 0.19); }
+
+@-webkit-keyframes bubble {
+  from {
+    -webkit-transform: translateY(35px);
+    transform: translateY(35px);
+    opacity: 1; }
+  to {
+    -webkit-transform: translateY(-120vh);
+    transform: translateY(-120vh);
+    opacity: 0.25; } }
+
+@keyframes bubble {
+  from {
+    -webkit-transform: translateY(35px);
+    transform: translateY(35px);
+    opacity: 1; }
+  to {
+    -webkit-transform: translateY(-120vh);
+    transform: translateY(-120vh);
+    opacity: 0.25; } }
+
+
+
+/*# sourceMappingURL=_bubble.css.map */

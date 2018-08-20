@@ -1,0 +1,70 @@
+.mfp-iframe-scaler iframe.mfp-iframe {
+	top: -5%;
+}
+
+.mfp-iframe-holder .mfp-close {
+	top: -15%;
+}
+
+.story-bar__user {
+	/* display: inline-block; */
+	margin: 0 10px;
+	cursor: pointer;
+}
+.story-bar {
+	text-align: center;
+	height: 80px;
+	padding-top: 60px;
+}
+
+.story-bar__user-avatar {
+	width: 70px;
+	height: 70px;
+	margin: 0 8px 4px 8px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-size: cover;
+	background-position:center;
+}
+
+.story-bar__user-name {
+	margin-top: 15px;
+}
+/* .story-bar__user-name span {
+  color: white;
+}
+
+.story-bar__user:hover span {
+  color: #aaa;
+} */
+.mfp-bg {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.story-bar__active {
+	border: 2px solid #00adff;
+}
+
+.scroll_disable {
+	overflow-x: hidden;
+}
+/* 手機 */
+@media screen and (max-width: 480px) {
+	.story-bar__user {
+		margin: 0 0px;
+	}
+	.story-bar {
+		padding-top: 50px;
+	}
+	.mfp-iframe-scaler iframe.mfp-iframe {
+		top: -25%;
+	}
+
+	.mfp-iframe-holder .mfp-close {
+		top: -40%;
+	}
+	.story-bar__user-avatar {
+		width: 55px;
+		height: 55px;
+	}
+}

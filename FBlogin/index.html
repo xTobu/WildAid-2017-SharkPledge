@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facebook Login</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="fbsdk.js"></script>
+</head>
+
+<body>
+    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button> -->
+    <input type="button" value="Login" class="btnLogin" style="display: none">
+    <input type="button" value="Share" class="btnShare">
+    <img src="" alt="">
+    <script>
+        // FB.ui(
+        //     {
+        //         method: 'share',
+        //         href: 'https://developers.facebook.com/docs/',
+        //     },
+        //     // callback
+        //     function (response) {
+        //         if (response && !response.error_message) {
+
+        //             window.location = "http://www.yoururl.com";
+        //         } else {
+        //             alert('Error while posting.');
+        //         }
+        //     }
+        // );
+        $('.btnLogin').on('click', function (e) {
+            e.preventDefault();
+            FB.login(function (response) {
+                if (response.authResponse) {
+                    var userID = response.authResponse.userID;
+                    $("img").attr(
+                        "src",
+                        "http://graph.facebook.com/" + userID + "/picture?type=large"
+                    );
+                    $('.btnLogin').hide()
+                    console.log("Welcome!  Fetching your information.... ");
+                    FB.api("/me", function (response) {
+                        console.log("Good to see you, " + response.name + ".");
+
+                    });
+
+                } else {
+                    console.log("User cancelled login or did not fully authorize.");
+                }
+            });
+        })
+
+        $('.btnShare').on('click', function (e) {
+            e.preventDefault();
+            FB.getLoginStatus(function (response) {
+                console.log(response);
+
+                if (response.status == 'connected') {
+                    FB.ui({
+                        method: 'share',
+                        hashtag: "#Test#1123",
+                        mobile_iframe: true,
+                        href: 'https://wildaid.webgene.com.tw/fbLogin/',
+                        quote: "\n嗨\n換行",
+                    }, function (response) {
+                        console.log(response);
+                        if (response != null) {
+                            console.log('user clicked send');
+                        } else {
+                            console.log('user clicked cancel');
+                        }
+                    });
+                } else {
+                    FB.login(function (response) {
+                        if (response.authResponse) {
+                            FB.ui({
+                                method: 'share',
+                                hashtag: "#Test#1123",
+                                mobile_iframe: true,
+                                href: 'https://wildaid.webgene.com.tw/fbLogin/',
+                                quote: "\n嗨\n換行",
+                            }, function (response) {
+                                console.log(response);
+                                if (response != null) {
+                                    console.log('user clicked send');
+                                } else {
+                                    console.log('user clicked cancel');
+                                }
+                            });
+
+                        } else {
+                            console.log("User cancelled login or did not fully authorize.");
+                        }
+                    });
+                }
+            });
+
+        })
+    </script>
+</body>
+
+</html>

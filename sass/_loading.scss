@@ -1,0 +1,56 @@
+@import "compass";
+// ---------------- settings
+$loadingWidth: 40px;
+$radius: $loadingWidth / 2;
+$circleRadius: round($radius / 3.5);
+$offset: $radius - 4px;
+$scaleDown: 0.2;
+$duration: 1000; // ms
+$numCircles: 8;
+$loadingColor: white;
+// -----------------
+.loading {
+    width: $radius*2;
+    height: $radius*2;
+    position: relative;
+    margin: 0 auto; // top: 50vh;
+    // transform: translateY(-50%);
+}
+
+.loading__circle {
+    border-radius: 50%;
+    background-color: $loadingColor;
+    width: $circleRadius;
+    height: $circleRadius;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+$durPer: $duration / $numCircles;
+@for $i from 1 through $numCircles {
+    .loading__circle:nth-child(#{$i}) {
+        top: round(cos( (360/$numCircles*$i) * (pi()/180)) * $radius + $offset);
+        left: round(sin( (360/$numCircles*$i) * (pi()/180)) * $radius+$offset);
+        animation-duration: $duration*1ms;
+        animation-name: upup;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: ($durPer*1ms*-$i);
+    }
+}
+
+@keyframes upup {
+    0% {
+        transform: scale($scaleDown, $scaleDown);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale($scaleDown, $scaleDown);
+        opacity: 1;
+    }
+}

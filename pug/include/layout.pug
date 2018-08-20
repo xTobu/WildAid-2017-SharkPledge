@@ -1,0 +1,91 @@
+doctype html
+html
+    head
+        include head
+    body
+        include privacy
+        .loadingPage(style="display:none")
+            include loading
+        block trans
+            include trans
+        // header
+        // add ".scrolled" when scrolling
+        header
+            .inner
+                .logoBox
+                    a.logo(href="index.html") 
+                        img(src="../asset/svg/logo-w.svg", alt="logo")
+                    a.life-logo(href="#")
+                        img(src="../asset/svg/life-logo-w.svg", alt="life-logo")
+                
+                .navBox
+                    .count
+                        .icon
+                            +svg('flag')
+                        p 目前共
+                            span 666,666
+                            | 人加入連署
+                    // bur
+                    block bur
+                        include bur
+                    // PC menu 
+                    block menu
+                        nav
+                            ul
+                                li
+                                    // add ".active"
+                                    a(href="#") 關於無翅宣言
+                                li
+                                    a(href="#") 加入宣言
+                                li
+                                    a(href="#") 宣言英雄榜
+                                li
+                                    a(href="#") 
+                                        span.icon-video
+                                        | 護鯊短片
+                                li
+                                    a(href="#")
+                                        span.icon-home
+                                li
+                                    a(href="#")
+                                        span.icon-fb
+                                li
+                                    a(href="#")
+                                        span.icon-yt
+                                li.lang
+                                    a(href="#") 中
+                                    span /
+                                    a(href="#") 英
+        // M Menu
+        include menubox
+        // lightbox
+        block lightbox
+            .popup(style="display:none")
+                .content
+                    .inner
+                        p 請填寫統一編號
+                        a.btn-blue(href="#")
+                            span.main 確定
+        // content
+        .wrap
+            .openingLogo(style="display:none")
+                .inner
+                    .partner(style="display:none")
+                        +svg('fin-w-comp')
+                    .ttBox
+                        .tt
+                            +svg('tt')
+                    .cover
+            // add "dark"
+            .fixed-element
+                .scroll
+                    span scroll
+                    .arrowBox-scroll
+                        span.arrow.arrow-first
+                        span.arrow.arrow-second
+                .page
+                    ul
+                        li 1
+                        li.midLine 
+                        li 5
+            block content
